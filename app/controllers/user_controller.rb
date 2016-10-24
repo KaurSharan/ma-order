@@ -1,6 +1,7 @@
 class UserController < ApplicationController
   layout 'admin'
   before_filter :confirm_login
+  skip_before_action :verify_authenticity_token
   include ApplicationHelper
 
  
